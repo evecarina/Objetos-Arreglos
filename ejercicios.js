@@ -11,6 +11,7 @@ a.forEach(function(a){
 
 }
 
+
 //ejercicio 3
 function multi(array,num){
  var m=array.reduce(function(valorAnterior, valorActual){
@@ -57,34 +58,29 @@ multi([2,2,3]);
 }
 edades([16,88,23,5]);
 
+// ejercicio 2
+function EjerciciosArray()
+{
+  this.ejercicio1 = function(_arr, _num)
+  {
+      var res = 0;
+      if(Array.isArray(_arr))
+      {
+        res = _arr.reduce(function(_total, _actual){
+          return _total * _actual;
+        });
+      }else{
+        if(!isNaN(_arr)){
+          res = _arr;
+        }
+      }
 
-//Primer ejercicio de objetos
-function Area(x,y){
-  this.x=x;
-  this.y=y;
- document.write(x*y);
-}
 
-var a_rec=new Area(30,89);
-// segundo ejercicio de objetos
-function Persona (nombre,dia,mes,anio){
-  this.nombre=nombre;
-  this.dia=dia;
-  this.mes=mes;
-  this.anio=anio;
-  var today = new Date();
-  var anio_actual = today.getFullYear();
-  var mes_actual = today.getMonth();
-  var dia_actual = today.getUTCDate();
-  var edad;
+     if(!isNaN(_num)){
+       res = res * _num;
+     }
 
-  if ( mes_actual>=mes && dia_actual>=this.dia){
-    edad=anio_actual-anio;
-  }else{
-    edad=anio_actual-anio-1;
+     return res;
   }
-  document.write("La edad actual de "+ nombre+" es "+ edad);
 
-}
-
-var edad_actual=new Persona("Evelyn",30,7,1994);
+  var ejercicios = new EjerciciosArray();
