@@ -56,12 +56,14 @@ function productoArreglo(arreglo){
 
 function fecha(array)
 {
-	var num=[];
-	array.forEach(function(item) {
-		if (item>18) num.push(2017-item);
+	var array_nuevo=[];
+	array.forEach(function(elemento) {
+		if (elemento>18){
+      array_nuevo.push(2017-elemento);
+    }
 	}
 );
-	return num;
+	return array_nuevo;
 }
 
 
@@ -78,7 +80,7 @@ describe('Ejercicio 2', function(){
 });
 
 describe('Ejercicio 3', function(){
-  it('Multiplosss', function(){
+  it('Multiplos del numero 7', function(){
     assert.deepEqual([14,21,77,49],multiplo([14,21,44,80,77,49],7));
   });
 });
@@ -103,6 +105,6 @@ describe( 'Ejercicio 6', function(){
 
 describe('Ejercicio 7', function(){
   it('Año de nacimiento', function(){
-    assert.deepEqual([1994,1995], fecha([21,14,80,8]));
+    assert.deepEqual([1995,1987,1992,1998], fecha([22,30,25,19]));
   });
 });
